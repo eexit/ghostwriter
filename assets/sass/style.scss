@@ -2,7 +2,7 @@
 // Colours //
 // ============================================================ //
 
-$primary: #F03838;
+$primary: #21759B;
 $secondary: #303030;
 $background: #FEFEFE;
 
@@ -90,6 +90,7 @@ pre {
     border-radius: 3px;
     margin: 0 0 40px;
     padding: 15px 20px;
+    white-space: pre;
 
     code {
         border: 0;
@@ -285,7 +286,7 @@ table {
     margin: 25px 0 0;
 
     &:after {
-        border-bottom: 1px dotted $secondary;
+        /*border-bottom: 1px dotted $secondary;*/
         content: "";
         display: block;
         margin: 40px auto 0;
@@ -334,7 +335,10 @@ table {
         text-align: center;
     }
 
-    a:hover { background: $secondary; }
+    a:hover {
+        background: $secondary;
+        color: #FFF;
+    }
 }
 
 .post-navigation {
@@ -387,11 +391,17 @@ table {
         padding: 20px 5px;
 
         &:hover {
-            background: #FCF5F5;
+            background: #EDF9FF;
             color: $primary;
             padding: 20px 12px;
 
-            .post-stub-tag { background: $primary; }
+            .post-stub-tag {
+                background: $primary;
+
+                &.fa {
+                    color: #FFF;
+                }
+            }
         }
     }
 }
@@ -405,6 +415,13 @@ table {
     margin: 7px 0 0;
     padding: 0 5px;
     text-transform: uppercase;
+
+
+    &.fa {
+        background: none;
+        color: #FF3E47;
+        line-height: inherit;
+    }
 }
 
 .post-stub-title {
@@ -415,6 +432,7 @@ table {
 
 .post-stub-date {
     display: inline-block;
+    font-size: 14px;
 
     &:before { content: "/ "; }
 }
